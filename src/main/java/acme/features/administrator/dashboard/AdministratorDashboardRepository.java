@@ -21,6 +21,26 @@ import acme.framework.repositories.AbstractRepository;
 
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
+	
+	//Queries Shout
+	
+	@Query("select 1.0 * count(s) / (select count(s) from Shout s) from Shout s where s.grecia.afrodita = true")
+	Double ratioOfShoutsWithGreciaFlagged();
+
+	@Query("select 1.0 * count(s) / (select count(s) from Shout s) from Shout s where s.grecia.hades.currency = '€'")
+	Double ratioOfShoutsWithGreciaHaveEuro();
+	
+	@Query("select avg(g.hades.amount) from Grecia g where g.hades.currency = '€'")
+	Double averageOfHadesGroupByEuro();
+	
+	@Query("select stddev(g.hades.amount) from Grecia g where g.hades.currency = '€'")
+	Double deviationOfHadesGroupByEuro();
+	
+	@Query("select avg(g.hades.amount) from Grecia g where g.hades.currency = '$'")
+	Double averageOfHadesGroupByDollar();
+	
+	@Query("select stddev(g.hades.amount) from Grecia g where g.hades.currency = '$'")
+	Double deviationOfHadesGroupByDollar();
 
 	//Queries Task
 	

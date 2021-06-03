@@ -299,8 +299,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>805</y>
+      <x>0</x>
+      <y>812</y>
       <w>252</w>
       <h>84</h>
     </coordinates>
@@ -442,6 +442,10 @@ bg=orange</panel_attributes>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Dashboard
 --
++ : Double
++ : Double
++ : Double
++ : Double
 + totalNumberOfPublicTasks: Integer
 + totalNumberOfPrivateTasks: Integer
 + totalNumberOfFinishedTasks: Integer
@@ -630,5 +634,37 @@ cadena de texto.
 
 bg=blue</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>812</y>
+      <w>252</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Grecia
+--
++ zeus: String {NotBlank, Unique, Pattern("^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$")}
++ poseidon: Date {NotNull, Temporal(TIMESTAMP)}
++ hades: Money {NotNull, Valid}
++ afrodita: boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>245</x>
+      <y>840</y>
+      <w>140</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=1
+Has &gt;</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>

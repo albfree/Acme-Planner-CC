@@ -10,6 +10,13 @@ import lombok.Setter;
 public class Dashboard implements Serializable {
 	
 	private static final long	serialVersionUID	= 1L;
+	
+	Double						ratioOfShoutsWithGreciaFlagged;
+	Double						ratioOfShoutsWithGreciaHaveEuro;
+	Double						averageOfHadesGroupByEuro;
+	Double						deviationOfHadesGroupByEuro;
+	Double						averageOfHadesGroupByDollar;
+	Double						deviationOfHadesGroupByDollar;
 
 	Integer						totalNumberOfPublicTasks;
 	Integer						totalNumberOfPrivateTasks;

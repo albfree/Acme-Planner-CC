@@ -26,20 +26,29 @@
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
+		<property name="grecia">
+			<ref bean="grecia01" />
+		</property>
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/15 15:55"/>
 		<property name="author" value="Jane Doe"/>
 		<property name="text" value="I'm the master of my room!"/>
-		<property name="info" value="http://www.example.org"/>		
+		<property name="info" value="http://www.example.org"/>	
+		<property name="grecia">
+			<ref bean="grecia02" />
+		</property>	
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/18 10:00"/>
 		<property name="author" value="Foo Bar"/>
 		<property name="text" value="Just turning 50!"/>
-		<property name="info" value="http://happybirthday.com"/>		
+		<property name="info" value="http://happybirthday.com"/>
+		<property name="grecia">
+			<ref bean="grecia03" />
+		</property>		
 	</bean>
 	
 	<bean id="shout04" class="acme.entities.shouts.Shout">
@@ -47,6 +56,9 @@
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
 		<property name="info" value="http://www.sample-app.com"/>
+		<property name="grecia">
+			<ref bean="grecia04" />
+		</property>
 	</bean>
 	
 	<bean id="shout05" class="acme.entities.shouts.Shout">
@@ -54,6 +66,9 @@
 		<property name="author" value="Javier Moreno"/>
 		<property name="text" value="Este grito es muy reciente!"/>
 		<property name="info"><null/></property>	
+		<property name="grecia">
+			<ref bean="grecia05" />
+		</property>
 	</bean>
 	
 	<bean id="shout06" class="acme.entities.shouts.Shout">
@@ -61,6 +76,97 @@
 		<property name="author" value="Javier Moreno"/>
 		<property name="text" value="Probando probando!"/>
 		<property name="info"><null/></property>	
+		<property name="grecia">
+			<ref bean="grecia06" />
+		</property>
+	</bean>
+	
+	<!--  Grecias -->
+	
+	<bean id="grecia01" class="acme.entities.grecias.Grecia">
+		<property name="zeus" value="2022-04-20"/>
+		<property name="poseidon" value="2021/10/18 10:39"/>
+		<property name="hades">
+			<ref bean="money01" />
+		</property>
+		<property name="afrodita" value="true"/>
+	</bean>
+	
+	<bean id="grecia02" class="acme.entities.grecias.Grecia">
+		<property name="zeus" value="2022-03-15"/>
+		<property name="poseidon" value="2021/12/19 10:30"/>
+		<property name="hades">
+			<ref bean="money02" />
+		</property>
+		<property name="afrodita" value="false"/>
+	</bean>
+	
+	<bean id="grecia03" class="acme.entities.grecias.Grecia">
+		<property name="zeus" value="2022-02-24"/>
+		<property name="poseidon" value="2021/09/20 12:00"/>
+		<property name="hades">
+			<ref bean="money03" />
+		</property>
+		<property name="afrodita" value="true"/>
+	</bean>
+	
+	<bean id="grecia04" class="acme.entities.grecias.Grecia">
+		<property name="zeus" value="2021-09-01"/>
+		<property name="poseidon" value="2021/07/18 10:00"/>
+		<property name="hades">
+			<ref bean="money04" />
+		</property>
+		<property name="afrodita" value="true"/>
+	</bean>
+	
+	<bean id="grecia05" class="acme.entities.grecias.Grecia">
+		<property name="zeus" value="2021-11-05"/>
+		<property name="poseidon" value="2021/11/04 10:00"/>
+		<property name="hades">
+			<ref bean="money05" />
+		</property>
+		<property name="afrodita" value="false"/>
+	</bean>
+	
+	<bean id="grecia06" class="acme.entities.grecias.Grecia">
+		<property name="zeus" value="2022-06-20"/>
+		<property name="poseidon" value="2021/09/18 10:20"/>
+		<property name="hades">
+			<ref bean="money06" />
+		</property>
+		<property name="afrodita" value="true"/>
+	</bean>
+	
+	<!-- Money -->
+
+	<bean id="money01" class="acme.framework.datatypes.Money">
+		<property name="amount" value="500.00" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money02" class="acme.framework.datatypes.Money">
+		<property name="amount" value="1000.00" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money03" class="acme.framework.datatypes.Money">
+		<property name="amount" value="1500.00" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money04" class="acme.framework.datatypes.Money">
+		<property name="amount" value="500.00" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money05" class="acme.framework.datatypes.Money">
+		<property name="amount" value="1000000.00" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="money06" class="acme.framework.datatypes.Money">
+		<property name="amount" value="10000.00" />
+		<property name="currency" value="€" />
 	</bean>
 	
 	<!-- Tasks -->

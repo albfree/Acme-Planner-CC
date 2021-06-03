@@ -11,6 +11,10 @@
 anonymous.shout.form.label.author = Author:
 anonymous.shout.form.label.text = Text:
 anonymous.shout.form.label.info = Optional link:
+anonymous.shout.form.label.zeus = Zeus:
+anonymous.shout.form.label.poseidon = Poseidon:
+anonymous.shout.form.label.hades = Hades:
+anonymous.shout.form.label.afrodita = Afrodita
 anonymous.shout.form.button.create = Shout! 
 anonymous.shout.form.button.return = Return
 
@@ -18,5 +22,11 @@ anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Optional link
+anonymous.shout.list.label.zeus = Zeus
+anonymous.shout.list.label.poseidon = Poseidon
+anonymous.shout.list.label.hades = Hades
+anonymous.shout.list.label.afrodita = Afrodita
 
 anonymous.shout.error.spam = This text string contains a high percentage of spam words
+anonymous.shout.error.zeus = The entered string already exists, try another
+anonymous.shout.error.hades = Currency must be € or $

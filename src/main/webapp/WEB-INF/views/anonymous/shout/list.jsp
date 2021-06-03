@@ -16,8 +16,13 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list readonly="true">
-	<acme:list-column code="anonymous.shout.list.label.moment" path="moment" width="20%"/>
-	<acme:list-column code="anonymous.shout.list.label.author" path="author" width="20%"/>
-	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="40%"/>
-	<acme:list-column code="anonymous.shout.list.label.info" path="info" width="20%"/>
+	<acme:list-column code="anonymous.shout.list.label.moment" path="moment" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.author" path="author" width="15%"/>
+	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="20%"/>
+	<acme:list-column code="anonymous.shout.list.label.info" path="info" width="15%"/>
+	
+	<acme:list-column code="anonymous.shout.list.label.zeus" path="grecia.zeus" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.poseidon" path="grecia.poseidon" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.hades" path="grecia.hades" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.afrodita" path="grecia.afrodita" width="10%"/>
 </acme:list>

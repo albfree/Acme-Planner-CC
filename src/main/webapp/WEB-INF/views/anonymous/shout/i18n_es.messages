@@ -11,6 +11,10 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Enlace opcional:
+anonymous.shout.form.label.zeus = Zeus:
+anonymous.shout.form.label.poseidon = Poseidon:
+anonymous.shout.form.label.hades = Hades:
+anonymous.shout.form.label.afrodita = Afrodita
 anonymous.shout.form.button.create = Gritar!
 anonymous.shout.form.button.return = Volver
 
@@ -18,5 +22,11 @@ anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
 anonymous.shout.list.label.info = Enlace opcional
+anonymous.shout.list.label.zeus = Zeus
+anonymous.shout.list.label.poseidon = Poseidon
+anonymous.shout.list.label.hades = Hades
+anonymous.shout.list.label.afrodita = Afrodita
 
 anonymous.shout.error.spam = Esta cadena de texto contiene un porcentaje alto de palabras spam
+anonymous.shout.error.zeus = La cadena introducida ya existe, prueba con otra
+anonymous.shout.error.hades = La moneda debe ser € o $

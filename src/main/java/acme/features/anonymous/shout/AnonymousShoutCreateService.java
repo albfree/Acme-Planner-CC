@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.grecias.Grecia;
 import acme.entities.shouts.Shout;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -44,7 +45,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "author", "text", "info");		
+		request.unbind(entity, model, "author", "text", "info", "grecia.zeus", "grecia.poseidon", "grecia.hades", "grecia.afrodita");		
 	}
 
 	@Override
@@ -61,6 +62,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		result.setText("");
 		result.setMoment(moment);
 		result.setInfo("");
+		
+		final Grecia grecia = new Grecia();
+		result.setGrecia(grecia);
 		
 		return result;
 	}
@@ -79,6 +83,18 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		if (!errors.hasErrors("author")) {
 			errors.state(request, !this.spamChecker.isSpamText(entity.getAuthor()), "author", "anonymous.shout.error.spam");
 		}
+		
+		if (!errors.hasErrors("grecia.zeus")) {
+			final Grecia grecia = this.repository.findGreciaByZeus(entity.getGrecia().getZeus());
+			
+			errors.state(request, grecia == null, "grecia.zeus", "anonymous.shout.error.zeus");
+		}
+		
+		if (!errors.hasErrors("grecia.hades")) {
+			final String currency = entity.getGrecia().getHades().getCurrency();
+			
+			errors.state(request, currency.equals("€") || currency.equals("$"), "grecia.hades", "anonymous.shout.error.hades");
+		}
 	}
 
 	@Override
@@ -91,6 +107,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
+		
+		this.repository.save(entity.getGrecia());
 		
 		this.repository.save(entity);
 	}

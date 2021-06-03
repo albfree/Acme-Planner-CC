@@ -47,7 +47,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			"totalNumberOfPublicWorkPlans", "totalNumberOfPrivateWorkPlans", "totalNumberOfFinishedWorkPlans",
 			"totalNumberOfNonFinishedWorkPlans", "averageWorkPlanExecutionPeriods", "deviationWorkPlanExecutionPeriods", "minimumWorkPlanExecutionPeriod",
 			"maximumWorkPlanExecutionPeriod", "averageWorkPlanTotalWorkloads", "deviationWorkPlanTotalWorkloads", "minimumWorkPlanTotalWorkload",
-			"maximumWorkPlanTotalWorkload");
+			"maximumWorkPlanTotalWorkload", "ratioOfShoutsWithGreciaFlagged", "ratioOfShoutsWithGreciaHaveEuro", "averageOfHadesGroupByEuro",
+			"deviationOfHadesGroupByEuro", "averageOfHadesGroupByDollar", "deviationOfHadesGroupByDollar");
 	}
 
 	@Override
@@ -56,7 +57,27 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		Dashboard result;
 		result = new Dashboard();
-
+		
+		//Metodos de Shout
+		
+		final Double ratioOfShoutsWithGreciaFlagged = this.repository.ratioOfShoutsWithGreciaFlagged() != null ? this.repository.ratioOfShoutsWithGreciaFlagged() : 0.;
+		result.setRatioOfShoutsWithGreciaFlagged(ratioOfShoutsWithGreciaFlagged);
+		
+		final Double ratioOfShoutsWithGreciaHaveEuro = this.repository.ratioOfShoutsWithGreciaHaveEuro() != null ? this.repository.ratioOfShoutsWithGreciaHaveEuro() : 0.;
+		result.setRatioOfShoutsWithGreciaHaveEuro(ratioOfShoutsWithGreciaHaveEuro);
+		
+		final Double averageOfHadesGroupByEuro = this.repository.averageOfHadesGroupByEuro() != null ? this.repository.averageOfHadesGroupByEuro() : 0.;
+		result.setAverageOfHadesGroupByEuro(averageOfHadesGroupByEuro);
+		
+		final Double deviationOfHadesGroupByEuro = this.repository.deviationOfHadesGroupByEuro() != null ? this.repository.deviationOfHadesGroupByEuro() : 0.;
+		result.setDeviationOfHadesGroupByEuro(deviationOfHadesGroupByEuro);
+		
+		final Double averageOfHadesGroupByDollar = this.repository.averageOfHadesGroupByDollar() != null ? this.repository.averageOfHadesGroupByDollar() : 0.;
+		result.setAverageOfHadesGroupByDollar(averageOfHadesGroupByDollar);
+		
+		final Double deviationOfHadesGroupByDollar = this.repository.deviationOfHadesGroupByDollar() != null ? this.repository.deviationOfHadesGroupByDollar() : 0.;
+		result.setDeviationOfHadesGroupByDollar(deviationOfHadesGroupByDollar);
+		
 		//Metodos de Task
 		
 		final Integer totalNumberOfPublicTasks = this.repository.totalNumberOfPublicTasks() != null ? this.repository.totalNumberOfPublicTasks() : 0;

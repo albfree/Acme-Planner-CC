@@ -20,6 +20,62 @@
 </h2>
 
 <br/>
+
+<table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.dashboard.form.title.shout-indicators"/>
+	</caption>
+
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioOfShoutsWithGreciaFlagged"/>
+		</th>
+		<td>
+			<acme:print value="${ratioOfShoutsWithGreciaFlagged}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioOfShoutsWithGreciaHaveEuro"/>
+		</th>
+		<td>
+			<acme:print value="${ratioOfShoutsWithGreciaHaveEuro}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageOfHadesGroupByEuro"/>
+		</th>
+		<td>
+			<acme:print value="${averageOfHadesGroupByEuro}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationOfHadesGroupByEuro"/>
+		</th>
+		<td>
+			<acme:print value="${deviationOfHadesGroupByEuro}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageOfHadesGroupByDollar"/>
+		</th>
+		<td>
+			<acme:print value="${averageOfHadesGroupByDollar}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationOfHadesGroupByDollar"/>
+		</th>
+		<td>
+			<acme:print value="${deviationOfHadesGroupByDollar}"/>
+		</td>
+	</tr>
+	
+	</table>
 	
 <table class="table table-sm">
 	<caption>
