@@ -32,7 +32,14 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Shout!");
 
 		super.clickOnMenu("Anonymous", "Shouts list");
-
+		
+		super.checkColumnHasValue(recordIndex, 1, author);
+		super.checkColumnHasValue(recordIndex, 2, text);
+		super.checkColumnHasValue(recordIndex, 3, info);
+		super.checkColumnHasValue(recordIndex, 4, zeus);
+		super.checkColumnHasValue(recordIndex, 5, poseidon);
+		super.checkColumnHasValue(recordIndex, 6, hades);
+		super.checkColumnHasValue(recordIndex, 7, afrodita);
 		
 	}
 	
