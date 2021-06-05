@@ -1,5 +1,6 @@
 package acme.features.anonymous.shout;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,8 +87,19 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		if (!errors.hasErrors("grecia.zeus")) {
 			final Grecia grecia = this.repository.findGreciaByZeus(entity.getGrecia().getZeus());
-			
-			errors.state(request, grecia == null, "grecia.zeus", "anonymous.shout.error.zeus");
+
+			if (grecia != null) {
+				errors.state(request, false, "grecia.zeus", "anonymous.shout.error.zeus");
+			} else {
+				final String[] parts = entity.getGrecia().getZeus().split("-");
+
+				final String[] dateParts = parts[1].split("/");
+
+				final String[] today = LocalDate.now().toString().split("-");
+
+				errors.state(request, today[0].equals(dateParts[0]) && today[1].equals(dateParts[1]) &&
+					today[2].equals(dateParts[2]), "grecia.zeus", "anonymous.shout.error.zeus-date");
+			}
 		}
 		
 		if (!errors.hasErrors("grecia.hades")) {

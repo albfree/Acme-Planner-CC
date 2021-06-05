@@ -30,3 +30,4 @@ anonymous.shout.list.label.afrodita = Afrodita
 anonymous.shout.error.spam = Esta cadena de texto contiene un porcentaje alto de palabras spam
 anonymous.shout.error.zeus = La cadena introducida ya existe, prueba con otra
 anonymous.shout.error.hades = La moneda debe ser € o $
+anonymous.shout.error.zeus-date = La fecha del patrón no es la actual

@@ -30,7 +30,7 @@ public class Grecia extends DomainEntity {
 	
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$")
+	@Pattern(regexp = "^(SHOUT)\\d{2}-\\d{4}\\/(0[1-9]|1[012])\\/(0[1-9]|[12][0-9]|3[01])$")
 	protected String 		zeus;
 	
 	@Temporal(TemporalType.TIMESTAMP)

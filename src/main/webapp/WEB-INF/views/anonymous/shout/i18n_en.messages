@@ -30,3 +30,4 @@ anonymous.shout.list.label.afrodita = Afrodita
 anonymous.shout.error.spam = This text string contains a high percentage of spam words
 anonymous.shout.error.zeus = The entered string already exists, try another
 anonymous.shout.error.hades = Currency must be € or $
+anonymous.shout.error.zeus-date = The pattern date is not current

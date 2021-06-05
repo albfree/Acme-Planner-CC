@@ -22,7 +22,7 @@
 	
 	<acme:menu-separator/>
 	
-	<acme:form-textbox placeholder="yyyy-mm-dd" code="anonymous.shout.form.label.zeus" path="grecia.zeus"/>
+	<acme:form-textbox placeholder="SHOUTXX-yyyy/mm/dd" code="anonymous.shout.form.label.zeus" path="grecia.zeus"/>
 	<acme:form-moment code="anonymous.shout.form.label.poseidon" path="grecia.poseidon"/>
 	<acme:form-money code="anonymous.shout.form.label.hades" path="grecia.hades"/>
 	<acme:form-checkbox code="anonymous.shout.form.label.afrodita" path="grecia.afrodita"/>

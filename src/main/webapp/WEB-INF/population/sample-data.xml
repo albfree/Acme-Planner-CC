@@ -84,7 +84,7 @@
 	<!--  Grecias -->
 	
 	<bean id="grecia01" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="2022-04-20"/>
+		<property name="zeus" value="SHOUT01-2022/04/20"/>
 		<property name="poseidon" value="2021/10/18 10:39"/>
 		<property name="hades">
 			<ref bean="money01" />
@@ -93,7 +93,7 @@
 	</bean>
 	
 	<bean id="grecia02" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="2022-03-15"/>
+		<property name="zeus" value="SHOUT02-2022/03/15"/>
 		<property name="poseidon" value="2021/12/19 10:30"/>
 		<property name="hades">
 			<ref bean="money02" />
@@ -102,7 +102,7 @@
 	</bean>
 	
 	<bean id="grecia03" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="2022-02-24"/>
+		<property name="zeus" value="SHOUT03-2022/02/24"/>
 		<property name="poseidon" value="2021/09/20 12:00"/>
 		<property name="hades">
 			<ref bean="money03" />
@@ -111,7 +111,7 @@
 	</bean>
 	
 	<bean id="grecia04" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="2021-09-01"/>
+		<property name="zeus" value="SHOUT04-2021/09/01"/>
 		<property name="poseidon" value="2021/07/18 10:00"/>
 		<property name="hades">
 			<ref bean="money04" />
@@ -120,7 +120,7 @@
 	</bean>
 	
 	<bean id="grecia05" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="2021-11-05"/>
+		<property name="zeus" value="SHOUT05-2021/11/05"/>
 		<property name="poseidon" value="2021/11/04 10:00"/>
 		<property name="hades">
 			<ref bean="money05" />
@@ -129,7 +129,7 @@
 	</bean>
 	
 	<bean id="grecia06" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="2022-06-20"/>
+		<property name="zeus" value="SHOUT06-2022/06/20"/>
 		<property name="poseidon" value="2021/09/18 10:20"/>
 		<property name="hades">
 			<ref bean="money06" />
@@ -146,7 +146,7 @@
 
 	<bean id="money02" class="acme.framework.datatypes.Money">
 		<property name="amount" value="1000.00" />
-		<property name="currency" value="€" />
+		<property name="currency" value="$" />
 	</bean>
 
 	<bean id="money03" class="acme.framework.datatypes.Money">
@@ -156,16 +156,16 @@
 
 	<bean id="money04" class="acme.framework.datatypes.Money">
 		<property name="amount" value="500.00" />
-		<property name="currency" value="€" />
+		<property name="currency" value="$" />
 	</bean>
 
 	<bean id="money05" class="acme.framework.datatypes.Money">
-		<property name="amount" value="1000000.00" />
+		<property name="amount" value="100" />
 		<property name="currency" value="€" />
 	</bean>
 	
 	<bean id="money06" class="acme.framework.datatypes.Money">
-		<property name="amount" value="10000.00" />
+		<property name="amount" value="880" />
 		<property name="currency" value="€" />
 	</bean>
 	
