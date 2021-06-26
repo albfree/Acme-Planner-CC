@@ -21,8 +21,8 @@
 	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="20%"/>
 	<acme:list-column code="anonymous.shout.list.label.info" path="info" width="15%"/>
 	
-	<acme:list-column code="anonymous.shout.list.label.zeus" path="grecia.zeus" width="10%"/>
-	<acme:list-column code="anonymous.shout.list.label.poseidon" path="grecia.poseidon" width="10%"/>
-	<acme:list-column code="anonymous.shout.list.label.hades" path="grecia.hades" width="10%"/>
-	<acme:list-column code="anonymous.shout.list.label.afrodita" path="grecia.afrodita" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.tiplet" path="kale.tiplet" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.deadline" path="kale.deadline" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.budget" path="kale.budget" width="10%"/>
+	<acme:list-column code="anonymous.shout.list.label.important" path="kale.important" width="10%"/>
 </acme:list>

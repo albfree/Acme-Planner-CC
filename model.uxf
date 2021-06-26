@@ -442,10 +442,12 @@ bg=orange</panel_attributes>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Dashboard
 --
-+ : Double
-+ : Double
-+ : Double
-+ : Double
++ ratioOfShoutsWithKaleFlagged: Double
++ ratioOfShoutsWithKaleZero: Double
++ averageOfBudgetGroupByEuro: Double
++ deviationOfBudgetGroupByEuro: Double
++ averageOfBudgetGroupByDollar: Double
++ deviationOfBudgetGroupByDollar: Double
 + totalNumberOfPublicTasks: Integer
 + totalNumberOfPrivateTasks: Integer
 + totalNumberOfFinishedTasks: Integer
@@ -644,12 +646,12 @@ bg=blue</panel_attributes>
       <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Grecia
+Kale
 --
-+ zeus: String {NotBlank, Unique, Pattern("^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$")}
-+ poseidon: Date {NotNull, Temporal(TIMESTAMP)}
-+ hades: Money {NotNull, Valid}
-+ afrodita: boolean
++ tiplet: String {NotBlank, Unique, Pattern("^\\d{6}#\\d{1,3}$")}
++ deadline: Date {NotNull, Temporal(TIMESTAMP)}
++ budget: Money {NotNull, Valid}
++ important: boolean
 </panel_attributes>
     <additional_attributes/>
   </element>

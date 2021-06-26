@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.grecias.Grecia;
+import acme.entities.kales.Kale;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,5 +47,5 @@ public class Shout extends DomainEntity {
 	
 	@OneToOne(optional = false)
 	@Valid
-	protected Grecia grecia;
+	protected Kale kale;
 }

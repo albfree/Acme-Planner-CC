@@ -16,7 +16,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void createPositive(final int recordIndex, final String author, final String text, final String info,
-		final String zeus, final String poseidon, final String hades, final String afrodita) {
+		final String tiplet, final String deadline, final String budget, final String important) {
 		
 		super.clickOnMenu("Anonymous", "Create shout");
 		
@@ -24,10 +24,10 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
 		
-		super.fillInputBoxIn("grecia.zeus", zeus);
-		super.fillInputBoxIn("grecia.poseidon", poseidon);
-		super.fillInputBoxIn("grecia.hades", hades);
-		super.fillInputBoxIn("grecia.afrodita", afrodita);
+		super.fillInputBoxIn("kale.tiplet", tiplet);
+		super.fillInputBoxIn("kale.deadline", deadline);
+		super.fillInputBoxIn("kale.budget", budget);
+		super.fillInputBoxIn("kale.important", important);
 		
 		super.clickOnSubmitButton("Shout!");
 
@@ -36,10 +36,10 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
-		super.checkColumnHasValue(recordIndex, 4, zeus);
-		super.checkColumnHasValue(recordIndex, 5, poseidon);
-		super.checkColumnHasValue(recordIndex, 6, hades);
-		super.checkColumnHasValue(recordIndex, 7, afrodita);
+		super.checkColumnHasValue(recordIndex, 4, tiplet);
+		super.checkColumnHasValue(recordIndex, 5, deadline);
+		super.checkColumnHasValue(recordIndex, 6, budget);
+		super.checkColumnHasValue(recordIndex, 7, important);
 		
 	}
 	
@@ -66,7 +66,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	@CsvFileSource(resources = "/anonymous/shout/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void createNegative(final int recordIndex, final String author, final String text, final String info,
-		final String zeus, final String poseidon, final String hades, final String afrodita) {
+		final String tiplet, final String deadline, final String budget, final String important) {
 		
 		super.clickOnMenu("Anonymous", "Create shout");
 		
@@ -74,10 +74,10 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
 		
-		super.fillInputBoxIn("grecia.zeus", zeus);
-		super.fillInputBoxIn("grecia.poseidon", poseidon);
-		super.fillInputBoxIn("grecia.hades", hades);
-		super.fillInputBoxIn("grecia.afrodita", afrodita);
+		super.fillInputBoxIn("kale.tiplet", tiplet);
+		super.fillInputBoxIn("kale.deadline", deadline);
+		super.fillInputBoxIn("kale.budget", budget);
+		super.fillInputBoxIn("kale.important", important);
 		
 		super.clickOnSubmitButton("Shout!");
 

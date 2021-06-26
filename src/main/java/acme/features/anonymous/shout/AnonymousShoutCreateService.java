@@ -1,12 +1,13 @@
 package acme.features.anonymous.shout;
 
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.grecias.Grecia;
+import acme.entities.kales.Kale;
 import acme.entities.shouts.Shout;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -46,7 +47,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "author", "text", "info", "grecia.zeus", "grecia.poseidon", "grecia.hades", "grecia.afrodita");		
+		request.unbind(entity, model, "author", "text", "info", "kale.tiplet", "kale.deadline", "kale.budget", "kale.important");		
 	}
 
 	@Override
@@ -64,8 +65,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		result.setMoment(moment);
 		result.setInfo("");
 		
-		final Grecia grecia = new Grecia();
-		result.setGrecia(grecia);
+		final Kale kale = new Kale();
+		result.setKale(kale);
 		
 		return result;
 	}
@@ -85,27 +86,39 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			errors.state(request, !this.spamChecker.isSpamText(entity.getAuthor()), "author", "anonymous.shout.error.spam");
 		}
 		
-		if (!errors.hasErrors("grecia.zeus")) {
-			final Grecia grecia = this.repository.findGreciaByZeus(entity.getGrecia().getZeus());
+		if (!errors.hasErrors("kale.tiplet")) {
+			final Kale kale = this.repository.findKaleByTiplet(entity.getKale().getTiplet());
 
-			if (grecia != null) {
-				errors.state(request, false, "grecia.zeus", "anonymous.shout.error.zeus");
+			if (kale != null) {
+				errors.state(request, false, "kale.tiplet", "anonymous.shout.error.tiplet");
 			} else {
-				final String[] parts = entity.getGrecia().getZeus().split("-");
+				final String[] parts = entity.getKale().getTiplet().split("#");
 
-				final String[] dateParts = parts[1].split("/");
+				final String datePartsYear = parts[0].substring(0,2);
+				final String datePartsMonth = parts[0].substring(2,4);
+				final String datePartsDay = parts[0].substring(4,6);
 
 				final String[] today = LocalDate.now().toString().split("-");
+				
+				final String todayFormatted = today[0].substring(2, 4);
 
-				errors.state(request, today[0].equals(dateParts[0]) && today[1].equals(dateParts[1]) &&
-					today[2].equals(dateParts[2]), "grecia.zeus", "anonymous.shout.error.zeus-date");
+				errors.state(request, todayFormatted.equals(datePartsYear) && today[1].equals(datePartsMonth) &&
+					today[2].equals(datePartsDay), "kale.tiplet", "anonymous.shout.error.tiplet-date");
 			}
 		}
 		
-		if (!errors.hasErrors("grecia.hades")) {
-			final String currency = entity.getGrecia().getHades().getCurrency();
+		if (!errors.hasErrors("kale.deadline")) {
+			final Calendar calendar = Calendar.getInstance();
+			calendar.add(Calendar.DAY_OF_MONTH, -7);
 			
-			errors.state(request, currency.equals("€") || currency.equals("$"), "grecia.hades", "anonymous.shout.error.hades");
+			errors.state(request, entity.getKale().getDeadline().before(calendar.getTime()), "kale.deadline", 
+				"anonymous.shout.error.deadline");
+		}
+		
+		if (!errors.hasErrors("kale.budget")) {
+			final String currency = entity.getKale().getBudget().getCurrency();
+			
+			errors.state(request, currency.equals("EUR") || currency.equals("USD"), "kale.budget", "anonymous.shout.error.budget");
 		}
 	}
 
@@ -120,7 +133,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
 		
-		this.repository.save(entity.getGrecia());
+		this.repository.save(entity.getKale());
 		
 		this.repository.save(entity);
 	}

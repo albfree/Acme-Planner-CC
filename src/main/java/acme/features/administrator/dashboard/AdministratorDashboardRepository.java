@@ -24,23 +24,23 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	
 	//Queries Shout
 	
-	@Query("select 1.0 * count(s) / (select count(s) from Shout s) from Shout s where s.grecia.afrodita = true")
-	Double ratioOfShoutsWithGreciaFlagged();
+	@Query("select 1.0 * count(s) / (select count(s) from Shout s) from Shout s where s.kale.important = true")
+	Double ratioOfShoutsWithKaleFlagged();
 
-	@Query("select 1.0 * count(s) / (select count(s) from Shout s) from Shout s where s.grecia.hades.currency = '€'")
-	Double ratioOfShoutsWithGreciaHaveEuro();
+	@Query("select 1.0 * count(s) / (select count(s) from Shout s) from Shout s where s.kale.budget.amount = 0")
+	Double ratioOfShoutsWithKaleZero();
 	
-	@Query("select avg(g.hades.amount) from Grecia g where g.hades.currency = '€'")
-	Double averageOfHadesGroupByEuro();
+	@Query("select avg(g.budget.amount) from Kale g where g.budget.currency = 'EUR'")
+	Double averageOfBudgetGroupByEuro();
 	
-	@Query("select stddev(g.hades.amount) from Grecia g where g.hades.currency = '€'")
-	Double deviationOfHadesGroupByEuro();
+	@Query("select stddev(g.budget.amount) from Kale g where g.budget.currency = 'EUR'")
+	Double deviationOfBudgetGroupByEuro();
 	
-	@Query("select avg(g.hades.amount) from Grecia g where g.hades.currency = '$'")
-	Double averageOfHadesGroupByDollar();
+	@Query("select avg(g.budget.amount) from Kale g where g.budget.currency = 'USD'")
+	Double averageOfBudgetGroupByDollar();
 	
-	@Query("select stddev(g.hades.amount) from Grecia g where g.hades.currency = '$'")
-	Double deviationOfHadesGroupByDollar();
+	@Query("select stddev(g.budget.amount) from Kale g where g.budget.currency = 'USD'")
+	Double deviationOfBudgetGroupByDollar();
 
 	//Queries Task
 	

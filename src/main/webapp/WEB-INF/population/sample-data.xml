@@ -26,8 +26,8 @@
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
-		<property name="grecia">
-			<ref bean="grecia01" />
+		<property name="kale">
+			<ref bean="kale01" />
 		</property>
 	</bean>
 	
@@ -36,8 +36,8 @@
 		<property name="author" value="Jane Doe"/>
 		<property name="text" value="I'm the master of my room!"/>
 		<property name="info" value="http://www.example.org"/>	
-		<property name="grecia">
-			<ref bean="grecia02" />
+		<property name="kale">
+			<ref bean="kale02" />
 		</property>	
 	</bean>
 	
@@ -46,8 +46,8 @@
 		<property name="author" value="Foo Bar"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>
-		<property name="grecia">
-			<ref bean="grecia03" />
+		<property name="kale">
+			<ref bean="kale03" />
 		</property>		
 	</bean>
 	
@@ -56,8 +56,8 @@
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
 		<property name="info" value="http://www.sample-app.com"/>
-		<property name="grecia">
-			<ref bean="grecia04" />
+		<property name="kale">
+			<ref bean="kale04" />
 		</property>
 	</bean>
 	
@@ -66,8 +66,8 @@
 		<property name="author" value="Javier Moreno"/>
 		<property name="text" value="Este grito es muy reciente!"/>
 		<property name="info"><null/></property>	
-		<property name="grecia">
-			<ref bean="grecia05" />
+		<property name="kale">
+			<ref bean="kale05" />
 		</property>
 	</bean>
 	
@@ -76,65 +76,65 @@
 		<property name="author" value="Javier Moreno"/>
 		<property name="text" value="Probando probando!"/>
 		<property name="info"><null/></property>	
-		<property name="grecia">
-			<ref bean="grecia06" />
+		<property name="kale">
+			<ref bean="kale06" />
 		</property>
 	</bean>
 	
-	<!--  Grecias -->
+	<!--  Kales -->
 	
-	<bean id="grecia01" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="SHOUT01-2022/04/20"/>
-		<property name="poseidon" value="2021/10/18 10:39"/>
-		<property name="hades">
+	<bean id="kale01" class="acme.entities.kales.Kale">
+		<property name="tiplet" value="200505#001"/>
+		<property name="deadline" value="2021/10/18 10:39"/>
+		<property name="budget">
 			<ref bean="money01" />
 		</property>
-		<property name="afrodita" value="true"/>
+		<property name="important" value="true"/>
 	</bean>
 	
-	<bean id="grecia02" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="SHOUT02-2022/03/15"/>
-		<property name="poseidon" value="2021/12/19 10:30"/>
-		<property name="hades">
+	<bean id="kale02" class="acme.entities.kales.Kale">
+		<property name="tiplet" value="200505#002"/>
+		<property name="deadline" value="2021/12/19 10:30"/>
+		<property name="budget">
 			<ref bean="money02" />
 		</property>
-		<property name="afrodita" value="false"/>
+		<property name="important" value="false"/>
 	</bean>
 	
-	<bean id="grecia03" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="SHOUT03-2022/02/24"/>
-		<property name="poseidon" value="2021/09/20 12:00"/>
-		<property name="hades">
+	<bean id="kale03" class="acme.entities.kales.Kale">
+		<property name="tiplet" value="200505#003"/>
+		<property name="deadline" value="2021/09/20 12:00"/>
+		<property name="budget">
 			<ref bean="money03" />
 		</property>
-		<property name="afrodita" value="true"/>
+		<property name="important" value="true"/>
 	</bean>
 	
-	<bean id="grecia04" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="SHOUT04-2021/09/01"/>
-		<property name="poseidon" value="2021/07/18 10:00"/>
-		<property name="hades">
+	<bean id="kale04" class="acme.entities.kales.Kale">
+		<property name="tiplet" value="200505#004"/>
+		<property name="deadline" value="2021/07/18 10:00"/>
+		<property name="budget">
 			<ref bean="money04" />
 		</property>
-		<property name="afrodita" value="true"/>
+		<property name="important" value="true"/>
 	</bean>
 	
-	<bean id="grecia05" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="SHOUT05-2021/11/05"/>
-		<property name="poseidon" value="2021/11/04 10:00"/>
-		<property name="hades">
+	<bean id="kale05" class="acme.entities.kales.Kale">
+		<property name="tiplet" value="200505#005"/>
+		<property name="deadline" value="2021/11/04 10:00"/>
+		<property name="budget">
 			<ref bean="money05" />
 		</property>
-		<property name="afrodita" value="false"/>
+		<property name="important" value="false"/>
 	</bean>
 	
-	<bean id="grecia06" class="acme.entities.grecias.Grecia">
-		<property name="zeus" value="SHOUT06-2022/06/20"/>
-		<property name="poseidon" value="2021/09/18 10:20"/>
-		<property name="hades">
+	<bean id="kale06" class="acme.entities.kales.Kale">
+		<property name="tiplet" value="200505#006"/>
+		<property name="deadline" value="2021/09/18 10:20"/>
+		<property name="budget">
 			<ref bean="money06" />
 		</property>
-		<property name="afrodita" value="true"/>
+		<property name="important" value="true"/>
 	</bean>
 	
 	<!-- Money -->

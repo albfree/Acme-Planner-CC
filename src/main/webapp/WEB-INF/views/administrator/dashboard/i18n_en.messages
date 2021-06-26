@@ -14,12 +14,12 @@ administrator.dashboard.form.title.task-indicators = Task indicators
 administrator.dashboard.form.title.workplan-indicators = Workplan indicators
 administrator.dashboard.form.title.shout-indicators = Shout indicators
 
-administrator.dashboard.form.label.ratioOfShoutsWithGreciaFlagged = 1
-administrator.dashboard.form.label.ratioOfShoutsWithGreciaHaveEuro = 2
-administrator.dashboard.form.label.averageOfHadesGroupByEuro = 3
-administrator.dashboard.form.label.deviationOfHadesGroupByEuro = 4
-administrator.dashboard.form.label.averageOfHadesGroupByDollar = 5
-administrator.dashboard.form.label.deviationOfHadesGroupByDollar = 6
+administrator.dashboard.form.label.ratioOfShoutsWithKaleFlagged = Ratio of shouts whose kales were flagged as important
+administrator.dashboard.form.label.ratioOfShoutsWithKaleZero = Ratio of shouts whose kales have budget zero
+administrator.dashboard.form.label.averageOfBudgetGroupByEuro = Average the budgets grouped by euro
+administrator.dashboard.form.label.deviationOfBudgetGroupByEuro = Standard deviation of the budgets grouped by euro
+administrator.dashboard.form.label.averageOfBudgetGroupByDollar = Average the budgets grouped by dollar
+administrator.dashboard.form.label.deviationOfBudgetGroupByDollar = Standard deviation of the budgets grouped by dollar
 
 administrator.dashboard.form.label.totalNumberOfPublicTasks = Total number of public tasks:
 administrator.dashboard.form.label.totalNumberOfPrivateTasks = Total number of private tasks:

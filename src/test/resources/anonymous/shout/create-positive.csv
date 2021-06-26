@@ -1,7 +1,7 @@
-recordIndex,author,text,info,zeus,poseidon,hades,afrodita
-2,Author 1,Text for shout,http://example.com,SHOUT07-2021/06/05,2021/09/18 10:20,€ 800.00,true
-3,Author 2,Text for shout,,SHOUT08-2021/06/05,2021/10/20 10:20,€ 10.00,true
-4,Author 3,Text for shout,http://example.com,SHOUT09-2021/06/05,2021/08/18 10:20,€ 50.00,false
-5,Author 4,Text for shout,,SHOUT10-2021/06/05,2021/12/18 10:20,€ 850.00,true
-6,Author 5,Text for shout,,SHOUT11-2021/06/05,2021/11/18 10:20,€ 150.00,false
-7,Author 6,Text for shout,,SHOUT12-2021/06/05,2021/10/18 10:20,€ 500.00,true
+recordIndex,author,text,info,tiplet,deadline,budget,important
+2,Author 1,Text for shout,http://example.com,210609#001,2021/02/18 10:20,EUR 800.00,true
+3,Author 2,Text for shout,,210609#002,2021/03/20 10:20,EUR 10.00,true
+4,Author 3,Text for shout,http://example.com,210609#003,2021/04/18 10:20,EUR 50.00,false
+5,Author 4,Text for shout,,210609#004,2021/01/18 10:20,EUR 850.00,true
+6,Author 5,Text for shout,,210609#005,2021/03/18 10:20,EUR 150.00,false
+7,Author 6,Text for shout,,210609#006,2021/05/18 10:20,EUR 500.00,true

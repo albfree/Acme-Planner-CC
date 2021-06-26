@@ -11,10 +11,10 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.info = Enlace opcional:
-anonymous.shout.form.label.zeus = Zeus:
-anonymous.shout.form.label.poseidon = Poseidon:
-anonymous.shout.form.label.hades = Hades:
-anonymous.shout.form.label.afrodita = Afrodita
+anonymous.shout.form.label.tiplet = Tiplet:
+anonymous.shout.form.label.deadline = Deadline:
+anonymous.shout.form.label.budget = Budget:
+anonymous.shout.form.label.important = Important
 anonymous.shout.form.button.create = Gritar!
 anonymous.shout.form.button.return = Volver
 
@@ -22,12 +22,13 @@ anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
 anonymous.shout.list.label.info = Enlace opcional
-anonymous.shout.list.label.zeus = Zeus
-anonymous.shout.list.label.poseidon = Poseidon
-anonymous.shout.list.label.hades = Hades
-anonymous.shout.list.label.afrodita = Afrodita
+anonymous.shout.list.label.tiplet = Tiplet
+anonymous.shout.list.label.deadline = Deadline
+anonymous.shout.list.label.budget = Budget
+anonymous.shout.list.label.important = Important
 
 anonymous.shout.error.spam = Esta cadena de texto contiene un porcentaje alto de palabras spam
-anonymous.shout.error.zeus = La cadena introducida ya existe, prueba con otra
-anonymous.shout.error.hades = La moneda debe ser € o $
-anonymous.shout.error.zeus-date = La fecha del patrón no es la actual
+anonymous.shout.error.tiplet = La cadena introducida ya existe, prueba con otra
+anonymous.shout.error.budget = La moneda debe ser EUR o USD
+anonymous.shout.error.tiplet-date = La fecha del patrón no es la actual
+anonymous.shout.error.deadline = La fecha debe estar al menos una semana en el pasado

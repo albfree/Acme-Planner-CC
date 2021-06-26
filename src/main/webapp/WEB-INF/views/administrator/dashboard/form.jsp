@@ -28,50 +28,50 @@
 
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.ratioOfShoutsWithGreciaFlagged"/>
+			<acme:message code="administrator.dashboard.form.label.ratioOfShoutsWithKaleFlagged"/>
 		</th>
 		<td>
-			<acme:print value="${ratioOfShoutsWithGreciaFlagged}"/>
+			<acme:print value="${ratioOfShoutsWithKaleFlagged}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.ratioOfShoutsWithGreciaHaveEuro"/>
+			<acme:message code="administrator.dashboard.form.label.ratioOfShoutsWithKaleZero"/>
 		</th>
 		<td>
-			<acme:print value="${ratioOfShoutsWithGreciaHaveEuro}"/>
+			<acme:print value="${ratioOfShoutsWithKaleZero}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.averageOfHadesGroupByEuro"/>
+			<acme:message code="administrator.dashboard.form.label.averageOfBudgetGroupByEuro"/>
 		</th>
 		<td>
-			<acme:print value="${averageOfHadesGroupByEuro}"/>
+			<acme:print value="${averageOfBudgetGroupByEuro}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviationOfHadesGroupByEuro"/>
+			<acme:message code="administrator.dashboard.form.label.deviationOfBudgetGroupByEuro"/>
 		</th>
 		<td>
-			<acme:print value="${deviationOfHadesGroupByEuro}"/>
+			<acme:print value="${deviationOfBudgetGroupByEuro}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.averageOfHadesGroupByDollar"/>
+			<acme:message code="administrator.dashboard.form.label.averageOfBudgetGroupByDollar"/>
 		</th>
 		<td>
-			<acme:print value="${averageOfHadesGroupByDollar}"/>
+			<acme:print value="${averageOfBudgetGroupByDollar}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviationOfHadesGroupByDollar"/>
+			<acme:message code="administrator.dashboard.form.label.deviationOfBudgetGroupByDollar"/>
 		</th>
 		<td>
-			<acme:print value="${deviationOfHadesGroupByDollar}"/>
+			<acme:print value="${deviationOfBudgetGroupByDollar}"/>
 		</td>
 	</tr>
 	

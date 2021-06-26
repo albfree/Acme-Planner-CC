@@ -11,12 +11,12 @@ public class Dashboard implements Serializable {
 	
 	private static final long	serialVersionUID	= 1L;
 	
-	Double						ratioOfShoutsWithGreciaFlagged;
-	Double						ratioOfShoutsWithGreciaHaveEuro;
-	Double						averageOfHadesGroupByEuro;
-	Double						deviationOfHadesGroupByEuro;
-	Double						averageOfHadesGroupByDollar;
-	Double						deviationOfHadesGroupByDollar;
+	Double						ratioOfShoutsWithKaleFlagged;
+	Double						ratioOfShoutsWithKaleZero;
+	Double						averageOfBudgetGroupByEuro;
+	Double						deviationOfBudgetGroupByEuro;
+	Double						averageOfBudgetGroupByDollar;
+	Double						deviationOfBudgetGroupByDollar;
 
 	Integer						totalNumberOfPublicTasks;
 	Integer						totalNumberOfPrivateTasks;

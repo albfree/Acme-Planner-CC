@@ -1,5 +1,5 @@
 
-package acme.entities.grecias;
+package acme.entities.kales;
 
 import java.util.Date;
 
@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Grecia extends DomainEntity {
+public class Kale extends DomainEntity {
 
 	// Serialisation identifier 
 
@@ -30,17 +30,17 @@ public class Grecia extends DomainEntity {
 	
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^(SHOUT)\\d{2}-\\d{4}\\/(0[1-9]|1[012])\\/(0[1-9]|[12][0-9]|3[01])$")
-	protected String 		zeus;
+	@Pattern(regexp = "^\\d{6}#\\d{1,3}$")
+	protected String 		tiplet;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date			poseidon;
+	protected Date			deadline;
 	
 	@NotNull
 	@Valid
-	protected Money		hades;
+	protected Money		budget;
 	
-	protected boolean		afrodita;
+	protected boolean		important;
 
 }
